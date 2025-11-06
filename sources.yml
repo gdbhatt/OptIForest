@@ -1,0 +1,30 @@
+data_dir: "data/raw"
+out_dir:  "data/processed"
+
+sources:
+  - name: "uci_hydraulic_systems"
+    type: "zip"
+    url: "https://archive.ics.uci.edu/static/public/447/condition%2Bmonitoring%2Bof%2Bhydraulic%2Bsystems.zip"
+    save_as: "uci_hydraulic/uci_hydraulic.zip"
+    extract: true
+    keep_extensions: [".txt"]   # we parse numeric TXT tables and assemble horizontally
+    rename_map:
+      PS1:  "pressure_ps1"
+      PS2:  "pressure_ps2"
+      PS3:  "pressure_ps3"
+      PS4:  "pressure_ps4"
+      PS5:  "pressure_ps5"
+      PS6:  "pressure_ps6"
+      TS1:  "temp_ts1"
+      TS2:  "temp_ts2"
+      TS3:  "temp_ts3"
+      TS4:  "temp_ts4"
+      FS1:  "flow_fs1"
+      FS2:  "flow_fs2"
+      VS1:  "vib_vs1"
+      CE:   "aux_ce"
+      CP:   "aux_cp"
+      EPS1: "aux_eps1"
+      SE:   "aux_se"
+
+ 
